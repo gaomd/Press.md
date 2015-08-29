@@ -4,6 +4,8 @@
  * Plugin Name: Press.md
  */
 
+require('vendor/autoload.php');
+
 define('PRESS_MD_MAIN_FILE', __FILE__);
 
 function press_md_inject_assets()
@@ -15,3 +17,9 @@ function press_md_inject_assets()
 add_action('admin_print_scripts-post.php', 'press_md_inject_assets');
 add_action('admin_print_scripts-post-new.php', 'press_md_inject_assets');
 add_filter('user_can_richedit', '__return_false');
+
+add_filter('the_content', function ($content) {
+    $converter = new \League\CommonMark\CommonMarkConverter();
+
+    return $converter->convertToHtml($content);
+}, 1);

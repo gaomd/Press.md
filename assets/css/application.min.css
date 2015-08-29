@@ -1,0 +1,56 @@
+/* Hide toolbar styling buttons */
+.quicktags-toolbar .button-small {
+    display: none;
+}
+
+/* Move Add Media button */
+.wp-media-buttons {
+    position: absolute;
+    top: 26px;
+    left: 6px;
+}
+
+#insert-media-button {
+    line-height: 24px;
+    height: 26px;
+}
+
+.quicktags-toolbar {
+    position: relative;
+}
+
+.quicktags-toolbar::before {
+    content: 'Markdown';
+    display: block;
+    position: absolute;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    font-style: italic;
+    width: 100px;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+    line-height: 37px;
+}
+
+@media screen and (max-width: 782px) {
+    #insert-media-button {
+        line-height: 20px;
+        height: 34px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .wp-media-buttons span.wp-media-buttons-icon {
+        vertical-align: middle;
+    }
+
+    .quicktags-toolbar {
+        height: 38px;
+    }
+
+    .quicktags-toolbar::before {
+        line-height: 45px;
+    }
+}

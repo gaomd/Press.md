@@ -26,5 +26,16 @@ function pressdown_render_the_content($content)
 add_action('admin_print_scripts-post.php', 'pressdown_inject_assets');
 add_action('admin_print_scripts-post-new.php', 'pressdown_inject_assets');
 add_filter('user_can_richedit', '__return_false');
+add_filter('image_send_to_editor', function ($html, $id, $caption, $title, $align, $url, $size, $alt) {
+    list($img_src, $width, $height) = image_downsize($id, $size);
+
+    $markdown = "![{$alt}]({$img_src})";
+
+    if ($url) {
+        $markdown = "[{$markdown}]($url)";
+    }
+
+    return $markdown;
+}, 100, 8);
 
 add_filter('the_content', 'pressdown_render_the_content', 1);

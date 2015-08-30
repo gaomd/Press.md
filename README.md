@@ -1,3 +1,3 @@
-# Press.md
+# Pressdown
 
 A WordPress plugin for Markdown enthusiasts.

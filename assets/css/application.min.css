@@ -34,6 +34,14 @@
     line-height: 37px;
 }
 
+.attachment-display-settings .alignment option[value="left"],
+.attachment-display-settings .alignment option[value="center"],
+.attachment-display-settings .alignment option[value="right"],
+.attachment-display-settings .alignment option[value="none"] {
+    /* Consider exclude value="none" css selector */
+    display: none;
+}
+
 @media screen and (max-width: 782px) {
     #insert-media-button {
         line-height: 20px;

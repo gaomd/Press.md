@@ -4,6 +4,8 @@
  * Plugin Name: Pressdown
  */
 
+defined('ABSPATH') or die();
+
 require('vendor/autoload.php');
 
 define('PRESSDOWN_MAIN_FILE', __FILE__);

@@ -2,6 +2,13 @@
 
 /*
  * Plugin Name: Pressdown
+ * Plugin URI:  https://github.com/gaomd/wordpress-plugin-pressdown
+ * Description: A WordPress plugin for Markdown enthusiasts.
+ * Version:     0.1.0-dev
+ * Author:      Mengdi Gao
+ * Author URI:  http://gao.md
+ * License:     GPL2
+ * License URI: https://github.com/gaomd/wordpress-plugin-pressdown/blob/master/LICENSE
  */
 
 defined('ABSPATH') or die();
